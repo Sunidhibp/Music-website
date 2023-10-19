@@ -1,0 +1,452 @@
+HTML code
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Website</title>
+    <!-- magnific-popup css cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css">
+    <!-- font-awesome cdn link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <!-- custom css link -->
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">  
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+
+    <!-- header -->
+
+    <header class="header">
+        <a href="#" class="logo"> <i class="fas fa-music"></i>SYMPHONY</a>
+        <nav class="navbar">
+            <a href="#home">home</a>
+            <a href="#musicplayer">Music player</a>
+            <a href="#spotify">Spotify player</a>
+            <a href="#library">Favorites</a>
+            <a href="#artist">artist</a>
+            <a href="#shop">shop</a>
+            <a href="#login">Login</a>
+        </nav>
+        <div id="menu" class="fas fa-bars"></div>
+    </header>
+
+    <!-- end -->
+
+    <!-- home -->
+
+    <section class="home" id="home">
+        <div class="content">
+            <h3>Live for  <br>the music.</h3>
+            <a href="#" class="btn">show more</a>
+        </div>
+    </section>
+
+    <!-- end -->
+
+    <!--music player -->
+
+    <section class="musicplayer" id="musicplayer">
+        <h1 class="heading">music player</h1>
+                <nav class="player">
+                    <div class="wrapper">
+                        <div class="details">
+                            <div class="now-playing">PLAYING x OF y</div>
+                            <div class="track-art"></div>
+                            <div class="track-name">Track Name</div>
+                            <div class="track-artist">Track Artist</div>
+                        </div>            
+                        <div class="slider_container">
+                            <div class="current-time">00:00</div>
+                             <input type="range" min="1" max="100" value="0" class="seek_slider" onchange="seekTo()">
+                             <div class="total-duration">00:00</div>
+                        </div>             
+                        <div class="slider_container">
+                            <i class="fa fa-volume-down"></i>
+                             <input type="range" min="1" max="100" value="99" class="volume_slider" onchange="setVolume()">
+                             <i class="fa fa-volume-up"></i>
+                        </div>            
+                        <div class="buttons">
+                            <div class="random-track" onclick="randomTrack()">
+                                <i class="fas fa-random fa-2x" title="random"></i>
+                            </div>
+                            <div class="prev-track" onclick="prevTrack()">
+                                 <i class="fa fa-step-backward fa-2x"></i>
+                             </div>
+                             <div class="playpause-track" onclick="playpauseTrack()">
+                                 <i class="fa fa-play-circle fa-5x"></i>
+                             </div>
+                             <div class="next-track" onclick="nextTrack()">
+                                 <i class="fa fa-step-forward fa-2x"></i>
+                             </div>
+                             <div class="repeat-track" onclick="repeatTrack()">
+                                 <i class="fa fa-repeat fa-2x" title="repeat"></i>
+                             </div>
+                        </div>             
+                         <div id="wave">
+                             <span class="stroke"></span>
+                             <span class="stroke"></span>
+                             <span class="stroke"></span>
+                             <span class="stroke"></span>
+                             <span class="stroke"></span>
+                             <span class="stroke"></span>
+                             <span class="stroke"></span>
+                         </div>  
+                    </div>
+                </nav>
+    </section>
+
+    <!-- end -->
+
+    <!-- spotify -->
+    <section class="spotify" id="spotify">
+        <h1 class="heading">Spotify Player</h1>
+                <nav class="spotify">
+                    <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/0u2P5u6lvoDfwTYjAADbn4?utm_source=generator&theme=0" width="100%" height="252" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+                    <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/3GaeH4EFwtkY2IJfs85u8u?utm_source=generator&theme=0" width="100%" height="252" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+                    <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/47UFoOuvrkt4khE7c5aap6?utm_source=generator&theme=0" width="100%" height="252" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>                    
+                    <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/69HzZ3ti9DLwb0GdWCGYSo?utm_source=generator&theme=0" width="100%" height="252" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+                    <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/0o9zmvc5f3EFApU52PPIyW?utm_source=generator&theme=0" width="100%" height="252" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+                    <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/0l0CvurVUrr2w3Jj1hOVFc?utm_source=generator&theme=0" width="100%" height="252" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+                    <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/2qxmye6gAegTMjLKEBoR3d?utm_source=generator&theme=0" width="100%" height="252" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+                    <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/0b11D9D0hMOYCIMN3OKreM?utm_source=generator&theme=0" width="100%" height="252" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+                    <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/5FVbvttjEvQ8r2BgUcJgNg?utm_source=generator&theme=0" width="100%" height="252" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+                    <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/2dpaYNEQHiRxtZbfNsse99?utm_source=generator&theme=0" width="100%" height="252" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+                </nav>
+    </section>
+
+    <!-- end   -->
+
+    <!-- library -->
+
+<section class="library" id="library">
+    <h1 class="heading">Library</h1>
+    <ul class="controls">
+        <li class="button active" data-filter="all">all</li>
+        <li class="button" data-filter="popular">popular</li>
+        <li class="button" data-filter="america">america</li>
+        <li class="button" data-filter="india">india</li>
+        <li class="button" data-filter="korea">korea</li>
+    </ul>
+    <div class="box-container">
+        <a href=" https://www.forbesindia.com/media/images/2022/Sep/img_194909_blackpinkgirlband.jpg" class="image popular">
+            <img src="https://www.forbesindia.com/media/images/2022/Sep/img_194909_blackpinkgirlband.jpg" alt="">
+        </a>
+        <a href="ihttps://i.scdn.co/image/ab6761610000e5eb5704a64f34fe29ff73ab56bb" class="image popular">
+            <img src="https://i.scdn.co/image/ab6761610000e5eb5704a64f34fe29ff73ab56bb" alt="">
+        </a>
+        <a href="https://i.scdn.co/image/ab67616d0000b27322805a1b17e41ae357bd98bc" class="image popular">
+            <img src="https://i.scdn.co/image/ab67616d0000b27322805a1b17e41ae357bd98bc" alt="">
+        </a>
+        <a href="ihttps://akns-images.eonline.com/eol_images/Entire_Site/20211123/rs_1200x1200-211223051358-1200-Selena-Gomez.jpg?fit=around%7C1080:1080&output-quality=90&crop=1080:1080;center,top" class="image america">
+            <img src="https://akns-images.eonline.com/eol_images/Entire_Site/20211123/rs_1200x1200-211223051358-1200-Selena-Gomez.jpg?fit=around%7C1080:1080&output-quality=90&crop=1080:1080;center,top" alt="">
+        </a>
+        <a href="https://i.scdn.co/image/ab67616d0000b273e787cffec20aa2a396a61647" class="image america">
+            <img src="https://i.scdn.co/image/ab67616d0000b273e787cffec20aa2a396a61647" alt="">
+        </a>
+        <a href="https://cdn.i-scmp.com/sites/default/files/styles/768x768/public/d8/images/methode/2019/05/15/c436a58e-73e5-11e9-b91a-87f62b76a5ee_image_hires_115320.jpg?itok=3c74LGuO&v=1557892405" class="image korea">
+            <img src="https://cdn.i-scmp.com/sites/default/files/styles/768x768/public/d8/images/methode/2019/05/15/c436a58e-73e5-11e9-b91a-87f62b76a5ee_image_hires_115320.jpg?itok=3c74LGuO&v=1557892405" alt="">
+        </a>
+        <a href="https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.teenvogue.com%2Fstory%2Fstray-kids-touring-connection-bringing-genuine-energy-to-the-stage-maniac-interview&psig=AOvVaw1dUTHgLwFqEGaARHtGws7h&ust=1697772066128000&source=images&cd=vfe&opi=89978449&ved=0CBEQjRxqFwoTCNC99_iTgYIDFQAAAAAdAAAAABAJ" class="image korea">
+            <img src="https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.teenvogue.com%2Fstory%2Fstray-kids-touring-connection-bringing-genuine-energy-to-the-stage-maniac-interview&psig=AOvVaw1dUTHgLwFqEGaARHtGws7h&ust=1697772066128000&source=images&cd=vfe&opi=89978449&ved=0CBEQjRxqFwoTCNC99_iTgYIDFQAAAAAdAAAAABAJ" alt="">
+        </a>
+        <a href="https://nationaltoday.com/wp-content/uploads/2022/05/105-Neha-Kakkar.jpg" class="image india">
+            <img src="https://nationaltoday.com/wp-content/uploads/2022/05/105-Neha-Kakkar.jpg" alt="">
+        </a>
+        <a href="https://upload.wikimedia.org/wikipedia/commons/7/7c/Darsan_Raval.jpg" class="image india">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/7/7c/Darsan_Raval.jpg" alt="">
+        </a>        
+    </div>
+</section>
+
+<!-- end -->
+
+    <!-- artist -->
+
+    <section class="artist" id="artist">
+        <h1 class="heading">the artist</h1>
+        <div class="box-container">       
+            <div class="box">
+                <div class="image">
+                    <img src="https://i.pinimg.com/736x/2e/31/fa/2e31fad7cb797d0a4c6ac7e2143b4ead.jpg" alt="">
+                    <div class="share">
+                        <a href="#" class="fab fa-facebook-f"></a>
+                        <a href="#" class="fab fa-twitter"></a>
+                        <a href="#" class="fab fa-instagram"></a>
+                    </div>
+                </div>
+                <div class="content">
+                    <h5>vocalist</h5>
+                    <h3>Zayn Mallik</h3>
+                </div>
+            </div>
+            <div class="box">
+                <div class="image">
+                    <img src="https://i.scdn.co/image/ab6761610000e5eb163a20ead4e7e7cb08df8567" alt="">
+                    <div class="share">
+                        <a href="#" class="fab fa-facebook-f"></a>
+                        <a href="#" class="fab fa-twitter"></a>
+                        <a href="#" class="fab fa-instagram"></a>
+                    </div>
+                </div>
+                <div class="content">
+                    <h5>vocalist</h5>
+                    <h3>Dhvani Bhanushali</h3>
+                </div>
+            </div>
+            <div class="box">
+                <div class="image">
+                    <img src="https://images.news18.com/ibnlive/uploads/2021/03/1616825630_lisa-blackpink-2.jpg" alt="">
+                    <div class="share">
+                        <a href="#" class="fab fa-facebook-f"></a>
+                        <a href="#" class="fab fa-twitter"></a>
+                        <a href="#" class="fab fa-instagram"></a>
+                    </div>
+                </div>
+                <div class="content">
+                    <h5>vocalist</h5>
+                    <h3>Lisa</h3>
+                </div>
+            </div>
+            <div class="box">
+                <div class="image">
+                    <img src="https://pyxis.nymag.com/v1/imgs/709/49e/f9dc751d511c907f02808dad68cfea1341-13-billie-eilish.rsquare.w700.jpg" alt="">
+                    <div class="share">
+                        <a href="#" class="fab fa-facebook-f"></a>
+                        <a href="#" class="fab fa-twitter"></a>
+                        <a href="#" class="fab fa-instagram"></a>
+                    </div>
+                </div>
+                <div class="content">
+                    <h5>vocalist</h5>
+                    <h3>Billie Eilish</h3>
+                </div>
+            </div>
+            <div class="box">
+                <div class="image">
+                    <img src="https://i1.sndcdn.com/avatars-4rW7G25JVXO9y8SW-tpxVNA-t500x500.jpg" alt="">
+                    <div class="share">
+                        <a href="#" class="fab fa-facebook-f"></a>
+                        <a href="#" class="fab fa-twitter"></a>
+                        <a href="#" class="fab fa-instagram"></a>
+                    </div>
+                </div>
+                <div class="content">
+                    <h5>vocalist</h5>
+                    <h3>Arman Mallik</h3>
+                </div>
+            </div>
+            <div class="box">
+                <div class="image">
+                    <img src="https://i.guim.co.uk/img/media/561e7da8fd2d8133b16d157fa317f34587201120/0_81_3597_2157/master/3597.jpg?width=1200&height=1200&quality=85&auto=format&fit=crop&s=b688033252e5b6e18ea59a8d54658b3b" alt="">
+                    <div class="share">
+                        <a href="#" class="fab fa-facebook-f"></a>
+                        <a href="#" class="fab fa-twitter"></a>
+                        <a href="#" class="fab fa-instagram"></a>
+                    </div>
+                </div>
+                <div class="content">
+                    <h5>vocalist</h5>
+                    <h3>Anne Marie</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- end -->
+    <!-- shop -->
+
+    <section class="shop" id="shop">
+        <h1 class="heading">our shop</h1>
+        <div class="box-container">
+            <div class="box">
+                <div class="image">
+                    <img src="http://static1.squarespace.com/static/5aa2069c25bf02363bf5c7c4/62ba665fc3ec213525aed405/63957fb2f8de467562e37787/1670780394284/rm-wild-flower-global-yt-chart.jpeg?format=1500w" alt="">
+                    <div class="share">
+                        <a href="#" class="fas fa-heart"></a>
+                        <a href="#" class="fas fa-shopping-cart"></a>
+                    </div>
+                </div>
+                <div class="content">
+                    <h3>album(wild flower)</h3>
+                    <h3>RM</h3>
+                    <h5>$28.99</h5>
+                </div>
+            </div>
+            <div class="box">
+                <div class="image">
+                    <img src="https://upload.wikimedia.org/wikipedia/en/3/38/Sam_Smith_and_Kim_Petras_-_Unholy.png" alt="">
+                    <div class="share">
+                        <a href="#" class="fas fa-heart"></a>
+                        <a href="#" class="fas fa-shopping-cart"></a>
+                    </div>
+                </div>
+                <div class="content">
+                    <h3>album(Unholy)</h3>
+                    <h3>Sam smith</h3>
+                    <h5>$28.99</h5>
+                </div>
+            </div>
+            <div class="box">
+                <div class="image">
+                    <img src="https://i.scdn.co/image/ab67616d0000b273970eb0bc318340af80080a5b" alt="">
+                    <div class="share">
+                        <a href="#" class="fas fa-heart"></a>
+                        <a href="#" class="fas fa-shopping-cart"></a>
+                    </div>
+                </div>
+                <div class="content">
+                    <h3>Album(Piya re)</h3>
+                    <h3>Darshan raval</h3>
+                    <h5>$28.99</h5>
+                </div>
+            </div>
+            <div class="box">
+                <div class="image">
+                    <img src="https://images.lifestyleasia.com/wp-content/uploads/sites/7/2022/06/24105512/left-and-right.jpeg" alt="">
+                    <div class="share">
+                        <a href="#" class="fas fa-heart"></a>
+                        <a href="#" class="fas fa-shopping-cart"></a>
+                    </div>
+                </div>
+                <div class="content">
+                    <h3>album(Left and right)</h3>
+                    <h3>Charlie puth</h3>
+                    <h5>$28.99</h5>
+                </div>
+            </div>
+            <div class="box">
+                <div class="image">
+                    <img src="https://s.saregama.tech/image/c/m/c/b8/02/shreya-ghoshal_1623851908.jpg" alt="">
+                    <div class="share">
+                        <a href="#" class="fas fa-heart"></a>
+                        <a href="#" class="fas fa-shopping-cart"></a>
+                    </div>
+                </div>
+                <div class="content">
+                    <h3>album(Sohneyaa)</h3>
+                    <h3>hreya ghoshal</h3>
+                    <h5>$28.99</h5>
+                </div>
+            </div>
+            <div class="box">
+                <div class="image">
+                    <img src="https://www.j-14.com/wp-content/uploads/2023/02/harry-styles-performance-grammys-2.jpg?resize=800%2C800&quality=86&strip=all" alt="">
+                    <div class="share">
+                        <a href="#" class="fas fa-heart"></a>
+                        <a href="#" class="fas fa-shopping-cart"></a>
+                    </div>
+                </div>
+                <div class="content">
+                    <h3>album(as it was)</h3>
+                    <h3>harry styles</h3>
+                    <h5>$28.99</h5>
+                </div>
+            </div>
+            <div class="box">
+                <div class="image">
+                    <img src="https://is5-ssl.mzstatic.com/image/thumb/Music115/v4/13/a8/ac/13a8ac7d-d90d-2e43-812d-273d9492b476/cover.jpg/600x600bf-60.jpg" alt="">
+                    <div class="share">
+                        <a href="#" class="fas fa-heart"></a>
+                        <a href="#" class="fas fa-shopping-cart"></a>
+                    </div>
+                </div>
+                <div class="content">
+                    <h3>album(dil ko karrar aayaa)</h3>
+                    <h3>neha kakkar</h3>
+                    <h5>$28.99</h5>
+                </div>
+            </div>
+            <div class="box">
+                <div class="image">
+                    <img src="https://www.billieeilish.com/files/2021/04/release_202104_BE-HTE-Title-Cover-1024x1024.jpg" alt="">
+                    <div class="share">
+                        <a href="#" class="fas fa-heart"></a>
+                        <a href="#" class="fas fa-shopping-cart"></a>
+                    </div>
+                </div>
+                <div class="content">
+                    <h3>album(Happier than ever)</h3>
+                    <h3>Billie eilish</h3>
+                    <h5>$28.99</h5>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- end -->
+
+<!-- login -->
+
+<section class="login" id="login">
+    <h1 class="heading" >Login</h1>
+    <nav class="login">
+<div class="wrapper">
+    <span class="icon-close"><ion-icon name="close"></ion-icon>
+    </span>
+    <div class="form-box login">
+        <h2>Login</h2>
+        <form action="#">
+            <div class="input-box">
+                <span class="icon">
+                    <ion-icon name="mail"></ion-icon>
+                </span>
+                <input type="email" required>
+                <label>Email</label>
+            </div>
+            <div class="input-box">
+                <span class="icon">
+                    <ion-icon name="lock-closed"></ion-icon>
+                </span>
+                <input type="password" required>
+                <label>Password</label>
+            </div>
+            <div class="remember=forget">
+                <label><input type="checkbox">
+                    Remember me</label>
+                    <a href="#">Forgot Password?</a>
+            </div>
+            <button type="submit" class="btn">Login</button>
+            <div class="login-register">
+                <p>Don't have an account?<a href="#" class="register-link">Register</a>
+                </p>
+            </div>
+        </form>
+    </div>
+</div>
+</nav>
+</section>
+
+<!-- end -->
+  <!-- footer -->
+
+  <section class="footer">
+
+    <div class="share">
+        <a href="#" class="fab fa-facebook-f"></a>
+        <a href="#" class="fab fa-instagram"></a>
+        <a href="#" class="fab fa-twitter"></a>
+        <a href="#" class="fab fa-linkedin"></a>
+        <a href="#" class="fab fa-pinterest"></a>
+    </div>
+
+    <div class="credit">created by <span>Sunidhi</span> | all rights reserved!</div>
+
+</section>
+
+
+<!-- end -->
+
+
+ 
+    <!-- jquery cdn link  -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- magnific popup js cdn link  -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
